@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roots of the quadratic(2) equation</title>
+    <style>
+      .par-three{
+        font-family: Arial, Helvetica, sans-serif;
+      
+      }
+
+      .main-div {
+        margin-top: 100px;
+        margin-right: 200px;
+        margin-left: 180px;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        align-items: center;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        background-color: rgba(64, 65, 58, 0.158);
+        min-width: 700px;
+        max-width: 600px;
+
+      }
+
+      .second-div {
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+        .first-input, .second-input , .third-input {
+        text-align: center;
+        border: 1px;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: antiquewhite;
+        margin: 10px 10px;
+        height: 20px;
+        }
+
+        .button {
+          width: 100%;
+          background-color: rgb(86, 233, 247);
+          padding: 5px 10px 5px 10px;
+          color: black;
+          border: 1px solid;
+          border-radius: 20px;
+          margin-top: 20px;
+          width: 150px;
+          height: 30px;
+        }
+        .button:hover{
+          cursor: pointer;
+          background-color: rgb(255, 255, 255);
+        }
+        .third-div {
+          margin-top: 10px;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="main-div">
+      <div>
+
+        <p class="par">
+          Roots of the quadratic(2) equation 
+        </p>
+        <p>
+          y=ax<sup>2</sup>+bx+c
+        </p>
+        <p>
+          Delta = B<sup>2</sup> - 4 * A * C
+        </p>
+
+      </div>
+
+      <div class="second-div">
+        <input class="first-input" placeholder="A">
+        <input class="second-input" placeholder="B">
+        <input class="third-input" placeholder="C">
+      </div>
+
+      <div class="third-div">
+        <button class="button" onclick="calculate()
+          ">
+        Calculate
+        </button>
+      </div>
+
+      <div>
+        <p class="par-three"></p>
+      </div>
+    
+
+    </div>
+
+
+
+
+    <script>
+      
+
+
+
+
+
+      setTimeout (function() {
+        alert(` حسام خلیلی توستانی
+                مهندسی کامپیوتر 
+                ترم یک 
+        `);
+      } , 15000);
+
+
+      function calculate () {
+        
+      let firstValue = document.querySelector('.first-input').value;
+
+      let secondValue = document.querySelector('.second-input').value;
+
+      let thirdValue = document.querySelector('.third-input').value;
+     
+      let calculateDelta = secondValue ** 2 - 4 * firstValue * thirdValue;
+      
+        console.log(calculateDelta);
+        
+      if (calculateDelta > 0 ) {
+        document.querySelector('.par-three').innerHTML = `The equation has <strong>Two(2)</strong> roots.`;  
+      }
+      else if (calculateDelta === 0) {
+        document.querySelector('.par-three').innerHTML
+         = `The equation has <strong>One(1)</strong> roots.`;
+      }
+
+      else {
+        document.querySelector('.par-three').innerHTML
+        = `The equation has <strong>Zero(0)</strong> roots.`;
+      }
+
+    
+
+
+    }
+    
+    </script>
+  </body>
+</html>
