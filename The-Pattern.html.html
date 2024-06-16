@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Pattern</title>
+
+  </head>
+  <body>
+
+    <!-- 
+      نام : حسام خلیلی توستانی 
+      ترم یک مهندسی کامپیوتر
+    -->
+    <p>
+      By using for loop , write a program to find first 20 sentences of following pattern. 
+    </p>
+    <p>
+      S = -1 + 1<sub>2</sub> - 1<sub>4</sub> + 1<sub>6</sub> - 1<sub>8</sub> ...
+    </p>
+   
+     
+
+     
+
+
+      <p>
+        Statdments :
+      </p>
+      <p class="pargraph">
+      </p>
+
+      <p>Total :</p>
+      <p class="toTal"></p>
+
+      <p class="firstTwo">
+
+      </p>
+
+
+
+
+
+      <p>How many first sentences do you want ?</p>
+      <p>Enter the amount bellow :</p>
+      <input style="width: 60px; height: 20px;" class="input"></button>
+
+      <button onclick="
+      inFinity ();
+      ">Claculate</button>
+
+      <p>Statments:</p>
+      <p class="infinityOne"></p>
+      <p>Total:</p>
+      <p class="infinityTwo"></p>
+      <p class="infinityThree"></p>
+
+    <script>
+   
+        
+        
+ 
+
+        let bb = 1; 
+      
+        let xx = 0 ; 
+
+        let result = -1;
+
+        let stateMents = '';
+
+        let state = '' ;
+
+        let counter = 0 ; 
+
+        for (i = 1; i <= 20; i++) {
+          
+          xx = 2 * i ;
+          result = result+bb* 1/xx ;  
+          bb = -1 * bb ;   
+          
+          stateMents = stateMents + result; 
+          console.log(stateMents);
+
+         console.log(result);         
+         document.querySelector('.pargraph').innerHTML= stateMents;
+         counter = counter + 1 ; 
+         state = state + `(${counter}) ${bb}* 1/ ${xx} `;
+         document.querySelector('.firstTwo').innerHTML = state ;
+         
+        }
+        
+        document.querySelector('.toTal').innerHTML = result;
+
+
+
+
+        function inFinity () {
+
+
+           
+        let bb = 1; 
+      
+       let xx = 0 ; 
+
+       let result = -1;
+   
+       let stateMents = '';
+
+       let state = `` ;
+
+       let counter = 1 ; 
+       let input = document.querySelector('.input').value;
+       for (i = 1; i <= input; i++) {
+        
+        xx = 2 * i ;
+        result = result+bb* 1/xx ;  
+        bb = -1 * bb ;   
+        
+        stateMents = stateMents + result; 
+        console.log(stateMents);
+
+       console.log(result);         
+       document.querySelector('.infinityOne').innerHTML= stateMents;
+
+       state = state + `(${counter})sentence ${bb}* 1/ ${xx} `;
+       
+       document.querySelector('.infinityThree').innerHTML = ` ${state}` ;
+       counter = counter + 1 ; 
+
+       console.log(counter);
+       };
+      
+      document.querySelector('.infinityTwo').innerHTML = result;
+
+
+
+
+
+
+    
+        };
+    </script>
+  </body>
+<html>
